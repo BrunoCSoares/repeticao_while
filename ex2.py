@@ -38,6 +38,8 @@ while True:
 
 if somaQtd != 0:
     media = somaMed / somaQtd
+else:
+    media = 0
 
 print(f"A média da turma foi {media}")
 print(repro, "alunos foram reporvaos direto")
