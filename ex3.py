@@ -10,3 +10,5 @@ if inicio < fim:
     while cont <= fim - 1:
         print(cont)
         cont += 1
+else:
+    print("O início deve ser maior que o fim")
