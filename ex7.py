@@ -14,22 +14,35 @@ while True:
     continuar = input("Continuar? [s/n]: ")
     match continuar:
         case "s":
-            continue
+            pass
         case "n":
             break
         case _:
-            print("Inválido: ")
+            print("Inválido!")
             break
+
     print("Opção 1: Verificar e exibir se um número x é ou não divisível por 6;")
     print("Opção 2: Calcular o fatorial do número x;")
     print("Opção 3: Exibir todos os inteiros de 1 até um número x.\n")
+
     num = int(input("Digite o número: "))
-    opcao = int(input("Qual opção desejada? [1/2/3]"))
+    opcao = int(input("Qual opção desejada? [1/2/3]: "))
+
     match opcao:
         case 1:
             if num % 6 == 0:
-                print("O número é divisível por 6")
+                print(f"O número {num} é divisível por 6.")
             else:
-                print("O número não é divisível por 6")
+                print(f"O número {num} não é divisível por 6.")
         case 2:
-            for
+            fatorial = 1
+            for i in range(1, num + 1):
+                fatorial *= i
+            print(f"O fatorial de {num} é {fatorial}.")
+        case 3:
+            print(f"Os inteiros de 1 até {num} são: ", end="")
+            for i in range(1, num + 1):
+                print(i, end=" ")
+            print()
+        case _:
+            print("Opção inválida!")
