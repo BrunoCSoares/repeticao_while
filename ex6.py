@@ -4,8 +4,13 @@ O dono de uma mercearia da zona rural do interior de SP necessita automatizar o 
 um programa que calcule o total da compra do cliente, sendo que o usuário deverá digitar os preços e as quantidades dos produtos e, quando a compra terminar, digitar 0 (zero) no valor do preço para finalizar e informar o valor a pagar ao cliente.
 '''
 
-totalCompra = 0
+total_compra = 0
 
 while True:
-    preco = float(input("Digite o preço do produto: "))
-    if preco
+    preco = float(input("Digite o preço do produto (ou 0 para finalizar): "))
+    if preco == 0:
+        break
+    quantidade = int(input("Digite a quantidade do produto: "))
+    total_compra += preco * quantidade
+
+print(f"Valor total a pagar: R$ {total_compra:.2f}")
